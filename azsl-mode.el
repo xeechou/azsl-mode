@@ -25,8 +25,8 @@
 
 ;;; Commentary:
 
-;; Major mode for editing HLSL grammar files, usually files ending
-;; with '(.fxh|.hlsl)'.  Is is based on c-mode plus some features
+;; Major mode for editing azsl grammar files, usually files ending
+;; with '(.azsl|.azsli)'.  Is is based on hlsl-mode plus minor features
 ;; and pre-specified fontifications.
 ;;; Code:
 
