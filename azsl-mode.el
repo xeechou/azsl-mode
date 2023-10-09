@@ -30,12 +30,10 @@
 ;; and pre-specified fontifications.
 ;;; Code:
 
-(eval-when-compile			; required and optional libraries
-  (require 'cc-mode)
-  (require 'hlsl-mode)
-  (require 'find-file)
-  (require 'align))
-
+(require 'cc-mode)
+(require 'hlsl-mode)
+(require 'find-file)
+(require 'align)
 
 (defgroup azsl nil
   "DirectX Shading Language Major Mode"
