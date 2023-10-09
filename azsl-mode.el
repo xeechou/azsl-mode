@@ -55,6 +55,7 @@
   (defvar azsl-qualifier-list
     (append hlsl-qualifier-list '("ShaderResourceGroup"
 				  "ShaderResourceGroupSemantic"
+				  "rootconstant"
 				  "partial")))
   (defvar azsl-keyword-list  hlsl-keyword-list)
   (defvar azsl-reserved-list hlsl-reserved-list)
@@ -132,6 +133,11 @@
   :after-hook (progn (c-make-noise-macro-regexps)
 		     (c-make-macro-with-semi-re)
 		     (c-update-modeline))
+  (with-eval-after-load 'company-keywords
+    (add-to-list 'company-keywords-alist
+		 `(azsl-mode . ,(append azsl-type-list azsl-qualifier-list
+					azsl-keyword-list azsl-reserved-list
+					azsl-builtin-list))))
   )
 
 (provide 'azsl-mode)
