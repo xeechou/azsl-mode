@@ -4,9 +4,10 @@
 ;;
 ;; Author: Xichen Zhou
 ;; Keywords: languages AZSL shader
-;; Version: 1.0
+;; Version: 1.0.1
+;; Package-Requires: ((emacs "24.4") (hlsl-mode "1.0"))
 
-;; This file is part of GNU Emacs.
+;; This file is not part of GNU Emacs.
 
 ;; GNU Emacs is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -36,7 +37,7 @@
 (require 'align)
 
 (defgroup azsl nil
-  "DirectX Shading Language Major Mode"
+  "Amazon Shading Language Major Mode"
   :group 'languages)
 
 (defconst azsl-version "6.3"
@@ -54,6 +55,7 @@
     (append hlsl-qualifier-list '("ShaderResourceGroup"
 				  "ShaderResourceGroupSemantic"
 				  "rootconstant"
+				  "option"
 				  "partial")))
   (defvar azsl-keyword-list  hlsl-keyword-list)
   (defvar azsl-reserved-list hlsl-reserved-list)
